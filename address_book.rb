@@ -7,10 +7,12 @@ require './lib/color'
 @current_contact = []
 
 def main_menu
+  puts Color.blink_brown("**************** Address Book ****************")
   puts Color.green("Please press ") + Color.under_green("n") + Color.green(" to enter a new contact.")
   puts Color.blue("Please press ") + Color.under_blue("l") + Color.blue(" to add a list.")
   puts Color.red("Please press ") + Color.under_red("d") + Color.red(" if you wish to delete a contact")
   puts Color.light_black("Please press ") + Color.under_black("x") + Color.light_black(" to exit.")
+  puts Color.blink_brown("**********************************************")
   main_choice = gets.chomp
   if main_choice == 'n'
     system "clear"
